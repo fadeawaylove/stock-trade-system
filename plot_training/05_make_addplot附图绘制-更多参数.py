@@ -41,3 +41,5 @@ add_plot = [
 mpf.plot(daily, type='candle', panel_ratios=(1, 0.5), volume=True, addplot=add_plot, style='default')
 
 plt.show()
+
+# https://qdhhkj.blog.csdn.net/article/details/105783640
