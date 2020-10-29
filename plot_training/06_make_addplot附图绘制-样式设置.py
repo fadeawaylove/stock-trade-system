@@ -3,6 +3,7 @@ import numpy as np
 import mplfinance as mpf
 import matplotlib.pyplot as plt
 
+
 daily = pd.read_csv(r'examples_data\SP500_NOV2019_Hist.csv', index_col=0, parse_dates=True)
 
 print(daily.head())
@@ -64,7 +65,7 @@ my_style = mpf.make_mpf_style(marketcolors=my_color, gridaxis='both', gridstyle=
 # mpf.plot(daily, type='candle', panel_ratios=(1, 0.5), volume=True, addplot=add_plot, style='default')
 mpf.plot(daily, type='candle', addplot=add_plot, volume=True,
          figscale=1.5, style=my_style,
-         title='aaaaaaaa', figratio=(5, 5), ylabel='price', ylabel_lower='volume',
+         title=u'SP500行情', figratio=(3, 2), ylabel='price', ylabel_lower='volume',
          # savefig='my_image.png'
          )
 """
@@ -78,7 +79,7 @@ plot绘图的部分参数
 :figratio:设置图形纵横比
 :figscale 设置图像的缩小或放大,1.5就是放大50%，最大不会超过电脑屏幕大小
 ：style 设置整个图表样式，可以使用前面设置的样式my_style,只能在plot函数中使用指定整个图表样式，不能在make_addplot中使用。
-savefig:导出图片，填写文件名及后缀
+savefig:导出图片，填写文件名及后缀,如果使用了，就不会显示图像了
 """
 
 plt.show()
